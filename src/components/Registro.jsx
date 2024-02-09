@@ -5,9 +5,9 @@ export default function Registro() {
   const [alias, setAlias] = useState("");
   const [password, setPassword] = useState("");
 
-  const doRegistro = (e) => {
+  const doRegistro = async (e) => {
     e.preventDefault();
-    registro(alias, password);
+    await registro(alias, password);
     /*
     fetch("http://localhost:8080/api/usuarios/registro", {
       method: "POST",
