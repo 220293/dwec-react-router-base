@@ -18,5 +18,19 @@ export default function MisCosas() {
       });
   }, []);
 
-  return <h1>Mis cosas</h1>;
+  const rows = cosas.map(cosa =>
+      <tr>
+        <td>{cosa.nombre}</td>
+      </tr>
+  );
+
+  return (
+    <div>
+      <h1>Mis cosas</h1>
+      <table>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+    
+  );
 }
