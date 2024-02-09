@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { registro } from "../services/usuarios.service";
 
 export default function Registro() {
   const [alias, setAlias] = useState("");
@@ -6,6 +7,8 @@ export default function Registro() {
 
   const doRegistro = (e) => {
     e.preventDefault();
+    registro(alias, password);
+    /*
     fetch("http://localhost:8080/api/usuarios/registro", {
       method: "POST",
       headers: {
@@ -17,6 +20,7 @@ export default function Registro() {
       .then((data) => {
         console.log(data);
       });
+    */
   };
 
   return (
